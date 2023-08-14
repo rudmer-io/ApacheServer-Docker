@@ -1,0 +1,9 @@
+version: "2.2"
+services:
+  apache:
+    image: httpd:latest
+    container_name: apache-svr-docker
+    ports:
+      - "9900:80"
+    volumes:
+      - ./website:/usr/local/apache2/htdocs
